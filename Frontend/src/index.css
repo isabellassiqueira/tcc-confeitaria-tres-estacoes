@@ -1,0 +1,13 @@
+/* Remove margens e padding globais */
+.app {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Garante que body e html ocupem 100% da tela */
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif; /* opcional */
+}

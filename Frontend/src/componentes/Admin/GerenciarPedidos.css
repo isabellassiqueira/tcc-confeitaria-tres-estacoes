@@ -1,0 +1,152 @@
+:root {
+  /* Paleta principal */
+  --champagne: #f5e9d7;
+  --champagne-light: #faefe4;
+  --rose: #e8b4bc;
+  --rose-dark: #cc8a94;
+  --gold: #c6a667;
+  --gold-dark: #a4854d;
+
+  /* Tipografia e base */
+  --ink: #333;
+  --ink-light: #555;
+  --white: #ffffff;
+  --background: #f7f3ed;
+
+  /* Sombras */
+  --shadow-sm: 0 4px 12px rgba(0,0,0,0.12);
+  --shadow-md: 0 6px 20px rgba(0,0,0,0.15);
+  --shadow-lg: 0 8px 28px rgba(0,0,0,0.20);
+
+  /* Raio padrão */
+  --radius: 18px;
+}
+
+.gerenciar-pedidos {
+  padding: 40px;
+  
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.gerenciar-pedidos h1 {
+  font-size: 32px;
+  color: var(--gold-dark);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Filtros */
+.gerenciar-pedidos .filtros {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.gerenciar-pedidos .filtros input,
+.gerenciar-pedidos .filtros select {
+  padding: 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--champagne);
+  background: var(--white);
+  font-size: 15px;
+  box-shadow: var(--shadow-sm);
+  transition: 0.25s;
+}
+
+.gerenciar-pedidos .filtros input:focus,
+.gerenciar-pedidos .filtros select:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 8px #c6a66780;
+}
+
+/* Tabela */
+.gerenciar-pedidos table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  border-radius: 18px;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.gerenciar-pedidos th {
+  background: var(--rose);
+  color: white;
+  padding: 14px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.gerenciar-pedidos td {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+}
+
+.gerenciar-pedidos tbody tr:hover td {
+  background: #3333330e;
+}
+
+/* Botão deletar */
+.btn-deletar {
+  background: #e26d6d;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.btn-deletar:hover {
+  background: #c74f4f;
+}
+
+/* Status */
+.select-status {
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--gold);
+  background: var(--white);
+}
+
+/* Paginação */
+.paginacao {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.paginacao button {
+  padding: 8px 14px;
+  background: var(--rose);
+  color: white;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.paginacao button:hover {
+  background: var(--rose-dark);
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: #00000060;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-box {
+  background: white;
+  padding: 26px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+  width: 360px;
+}

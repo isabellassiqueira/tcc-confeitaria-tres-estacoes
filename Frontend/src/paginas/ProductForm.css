@@ -1,0 +1,108 @@
+.product-form {
+  background: #fffaf9;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  padding: 30px;
+  max-width: 500px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.product-form h2 {
+  text-align: center;
+  color: #6a1b1b;
+}
+
+.product-form input,
+.product-form textarea,
+.product-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #f2d0c9;
+  border-radius: 8px;
+  background: #fff8f7;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.product-form input:focus,
+.product-form textarea:focus {
+  border-color: #e57373;
+  box-shadow: 0 0 6px rgba(229, 115, 115, 0.3);
+  outline: none;
+}
+
+.type-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.image-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-preview img {
+  margin-top: 10px;
+  max-width: 150px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+/* Container dos botões */
+.product-form .buttons-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+/* Botões gerais */
+.product-form button {
+  padding: 10px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  transition: 0.25s ease;
+}
+
+/* Botão principal (Cadastrar / Salvar) */
+.product-form button[type="submit"] {
+  background-color: #8b4513; /* marrom elegante */
+  color: #fff;
+}
+
+.product-form button[type="submit"]:hover {
+  background-color: #a05a2a;
+  transform: translateY(-2px);
+}
+
+.product-form button[type="submit"]:disabled {
+  background-color: #b08d6f;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Botão Cancelar */
+.product-form button.cancel-btn {
+  background-color: #ddd;
+  color: #444;
+}
+
+.product-form button.cancel-btn:hover {
+  background-color: #cfcfcf;
+  transform: translateY(-2px);
+}

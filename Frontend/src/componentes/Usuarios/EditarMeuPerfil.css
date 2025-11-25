@@ -1,0 +1,104 @@
+.editar-perfil-container {
+  width: 100%;
+  min-height: 30vh;
+  background: #fff7f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.editar-perfil-card {
+  background: #ffffff;
+  padding: 35px;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 18px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  animation: fadeIn 0.25s ease-out;
+}
+
+.editar-perfil-card h2 {
+  text-align: center;
+  color: #9D6155;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+.campo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid #e2c7c2;
+  background: #fff;
+  border-radius: 12px;
+}
+
+.campo svg {
+  color: #9D6155;
+  font-size: 20px;
+}
+
+.campo input {
+  border: none;
+  flex: 1;
+  outline: none;
+  font-size: 1rem;
+  color: #5a3d36;
+  background: transparent;
+}
+
+.btn-salvar {
+  width: 100%;
+  background: #9D6155;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.btn-salvar:hover {
+  background: #864f43;
+}
+
+.btn-salvar:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.erro-msg {
+  background: #ffd1d1;
+  color: #a33a3a;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.sucesso-msg {
+  background: #d9ffd9;
+  color: #207020;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

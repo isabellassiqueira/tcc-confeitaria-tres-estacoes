@@ -1,0 +1,32 @@
+# --- Logs ---
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# --- Dependências Node ---
+node_modules/
+
+# --- Builds ---
+dist/
+dist-ssr/
+build/
+
+# --- Arquivos de ambiente (segredos) ---
+.env
+.env.*
+Backend_Cliente/.env
+
+# --- Uploads de arquivos (gerados em produção) ---
+Backend_Cliente/uploads/
+
+# --- Pastas de editor/IDE ---
+.vscode/
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

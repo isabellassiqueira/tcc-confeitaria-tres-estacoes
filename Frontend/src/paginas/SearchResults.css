@@ -1,0 +1,158 @@
+/* ===== TIPOGRAFIA ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.search-results-wrapper {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fafafa;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* ===== SIDEBAR ===== */
+.filter-sidebar {
+  width: 250px;
+    background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+  height: fit-content;
+  position: sticky;
+  top: 96px; /* sticky offset - ajuste conforme header */
+  transition: transform 300ms ease, opacity 300ms ease;
+  z-index: 10;
+}
+
+.filter-sidebar h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.clear-filters-btn,
+.apply-btn {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.clear-filters-btn {
+  background-color: #f5f5f5;
+  color: #555;
+}
+
+.clear-filters-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.apply-btn {
+  margin-top: 8px;
+  background: #9D6155;
+  color: white;
+  border:none;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-weight:700;
+  cursor:pointer;
+  box-shadow: 0 10px 24px rgba(255,90,77,0.14);
+}
+
+
+
+/* ===== FILTROS ===== */
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.filter-btn {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.filter-btn.selected,
+.filter-btn:hover {
+  background-color: #ff6b6b;
+  color: #fff;
+  border-color: #ff6b6b;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.filter-group label {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  color: #555;
+}
+
+.filter-group input,
+.filter-group select {
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.filter-group input:focus,
+.filter-group select:focus {
+  border-color: #ff6b6b;
+  box-shadow: 0 0 5px rgba(255, 107, 107, 0.3);
+}
+
+/* ===== RESULTADOS ===== */
+.search-results {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.searched-text {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 1024px) {
+  .search-results-wrapper {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .filter-sidebar {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+
+  .filter-container {
+    gap: 0.5rem;
+  }
+
+  .filter-group {
+    flex: 1;
+  }
+}

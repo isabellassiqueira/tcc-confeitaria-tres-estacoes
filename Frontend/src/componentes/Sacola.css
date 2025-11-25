@@ -1,0 +1,205 @@
+/* Overlay escuro */
+.carrinho-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  justify-content: flex-end;
+  z-index: 9999;
+  transition: opacity .3s ease;
+}
+
+/* Sidebar */
+.carrinho-sidebar {
+  width: 380px;
+  background: #fff;
+  height: 100%;
+  padding: 25px;
+  box-shadow: -4px 0 15px rgba(0,0,0,0.15);
+  animation: slideIn .35s ease forwards;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+
+.titulo-sacola {
+  font-size: 26px;
+  font-weight: 700;
+  color: #9D6155;
+  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: .5px;
+}
+
+.carrinho-vazio {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 16px;
+  color: #666;
+}
+
+/* Lista */
+.carrinho-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Item */
+.carrinho-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding: 12px;
+  background: #faf7f7;
+  border-radius: 14px;
+  position: relative;
+  transition: .2s ease;
+}
+
+.carrinho-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* Imagem */
+.img-wrapper {
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Info */
+.item-info h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.item-info .preco {
+  margin: 4px 0;
+  color: #9D6155;
+  font-weight: 700;
+}
+
+/* Quantidade */
+.item-quantidade {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.item-quantidade button {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  border: none;
+  background: #e8d4d0;
+  color: #9D6155;
+  font-size: 20px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.item-quantidade button:hover {
+  background: #d7bcb7;
+}
+
+.item-quantidade span {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Botão remover */
+.remover-btn {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  color: #c26b63;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.remover-btn:hover {
+  color: #8d423b;
+}
+
+/* Total */
+.carrinho-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 18px;
+  border-top: 2px solid #eee;
+  font-size: 18px;
+}
+
+.carrinho-total strong {
+  color: #9D6155;
+}
+
+/* Botão finalizar */
+.btn-finalizar {
+  width: 100%;
+  margin-top: 15px;
+  background: #9D6155;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+.btn-finalizar:hover {
+  background: #7c4d45;
+}
+
+.btn-fechar-sacola {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  font-size: 28px;
+  font-weight: 300;
+  color: #9D6155;
+  background: #f5eaea;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .25s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.btn-fechar-sacola:hover {
+  background: #e3c9c5;
+  transform: scale(1.08);
+}

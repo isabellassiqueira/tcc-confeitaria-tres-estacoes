@@ -1,0 +1,164 @@
+.degustacoes-container {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background: linear-gradient(120deg, #f3e5e5, #e7d0d0);
+  min-height: 100vh;
+
+}
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.45);
+  padding: 50px 20px;
+  text-align: center;
+  color: #fff;
+  border-radius: 12px;
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.hero-overlay p {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* ===== EVENTOS ===== */
+.events-list {
+  padding-top: 0px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.events-list h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #7e473c;
+  font-weight: 600;
+}
+
+/* ===== GRID ===== */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* ===== CARD ===== */
+.event-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+}
+
+.event-img-wrapper {
+  height: 200px;
+  overflow: hidden;
+}
+
+.event-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.event-card:hover .event-img {
+  transform: scale(1.05);
+}
+
+.event-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.event-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #7e473c;
+  font-weight: 600;
+}
+
+.event-content p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/* ===== BOTÃO ===== */
+.btn-agendar {
+  background: #7e473c;
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  transition: background 0.3s, transform 0.2s;
+  font-size: 0.95rem;
+  margin-top: 10px;
+}
+
+.btn-agendar .btn-arrow {
+  margin-left: 8px;
+  font-size: 1.1rem;
+  transition: transform 0.3s;
+}
+
+.btn-agendar:hover {
+  color: #7e473c;
+  transform: translateY(-2px);
+}
+
+.btn-agendar:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+/* ===== EXPANSÃO ===== */
+.expanded-info {
+  margin-top: 15px;
+  background: #fff5f5;
+  padding: 15px;
+  border-radius: 8px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.expanded-info p {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* ===== ANIMAÇÃO ===== */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-5px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  .hero-overlay h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-overlay p {
+    font-size: 1rem;
+  }
+
+}

@@ -1,0 +1,104 @@
+:root {
+  /* Paleta principal */
+  --champagne: #7d7d7d;
+  --champagne-light: #757575;
+  --rose: #e8b4bc;
+  --rose-dark: #cc8a94;
+  --gold: #6c6c6c;
+  --gold-dark: #a4854d;
+
+  /* Tipografia e base */
+  --ink: #333;
+  --ink-light: #555;
+  --white: #ffffff;
+  --background: #f7f3ed;
+
+  /* Sombras */
+  --shadow-sm: 0 4px 12px rgba(0,0,0,0.12);
+  --shadow-md: 0 6px 20px rgba(0,0,0,0.15);
+  --shadow-lg: 0 8px 28px rgba(0,0,0,0.20);
+
+  /* Raio padrão */
+  --radius: 18px;
+}
+
+.usuarios-container {
+  width: 90%;
+  margin: 40px auto;
+  background: var(--white);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-md);
+  animation: fadeIn 0.6s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+.usuarios-container h2 {
+  text-align: center;
+  color: var(--gold-dark);
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+/* Filtros */
+.filtros input,
+.filtros select {
+  padding: 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--champagne);
+  background: var(--white);
+  transition: .2s;
+  width: 100%;
+}
+
+.filtros input:focus,
+.filtros select:focus {
+  border-color: var(--gold-dark);
+  box-shadow: 0 0 8px #c6a66770;
+}
+
+/* Tabela */
+.usuarios-table th {
+  background: var(--rose);
+  color: white;
+  padding: 14px;
+  font-weight: 600;
+
+}
+
+.usuarios-table {
+    width: 100%;
+}
+.usuarios-table td {
+  padding: 14px;
+  background: var(--white);
+  border-bottom: 1px solid #eee;
+}
+
+.usuarios-table tr:hover td {
+  background: #b0b0b048;
+}
+
+/* Botão editar */
+.btn-edit {
+  background: var(--rose);
+  padding: 8px 14px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: .25s;
+}
+
+.btn-edit:hover {
+  background: var(--rose-dark);
+}
+
+/* Modal */
+.modal {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: var(--shadow-lg);
+}

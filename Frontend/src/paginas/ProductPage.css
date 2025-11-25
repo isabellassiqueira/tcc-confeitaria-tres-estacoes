@@ -1,0 +1,654 @@
+/* ==========================================
+   VARIÁVEIS — mesma paleta do seu painel
+========================================== */
+:root {
+  --champagne: #f5e9d7;
+  --rose: #e8b4bc;
+  --rose-dark: #cc8a94;
+  --gold: #c6a667;
+  --gold-dark: #a4854d;
+  --ink: #333;
+  --ink-light: #555;
+  --white: #fff;
+  --shadow-lg: 0 8px 26px rgba(0,0,0,0.18);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+  --radius: 18px;
+}
+
+/* ==========================================
+   LAYOUT GERAL
+========================================== */
+.product-page-modern {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 70px;
+  padding: 30px;
+  font-family: "Poppins", sans-serif;
+  background: #ffffff;
+
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================
+   ÁREA DA IMAGEM
+========================================== */
+.image-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Moldura oval premium */
+.oval-frame {
+  width: 500px;
+  height: 520px;
+  border-radius: 60px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--shadow-lg);
+  background: var(--white);
+  cursor: zoom-in;
+  transition: 0.3s ease;
+}
+
+.oval-frame:hover {
+  transform: scale(1.02);
+}
+
+.oval-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Miniatura */
+.mini-gallery {
+  display: flex;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.mini-gallery img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  box-shadow: var(--shadow-md);
+}
+
+.mini-gallery img:hover {
+  transform: scale(1.08);
+}
+
+.mini-gallery img.active {
+  border-color: var(--rose-dark);
+}
+
+/* ==========================================
+   ÍCONES SOCIAIS — agora rosé/dourado
+========================================== */
+.social-icons {
+  margin-top: 25px;
+  display: flex;
+  gap: 18px;
+  font-size: 24px;
+}
+
+.social-icons svg {
+  background: var(--rose);
+  color: var(--white);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.25s;
+  box-shadow: var(--shadow-md);
+}
+
+.social-icons svg:hover {
+  background: var(--rose-dark);
+}
+
+/* ==========================================
+   CONTEÚDO
+========================================== */
+.content-section {
+  max-width: 600px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* Categoria */
+.tag-modern {
+  display: inline-block;
+  background: var(--rose-dark);
+  padding: 6px 14px;
+  border-radius: 10px;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: var(--shadow-md);
+}
+
+/* Título */
+.product-title-modern {
+  font-size: 42px;
+  font-weight: 700;
+  margin: 20px 0;
+  color: #9D6155;
+  line-height: 1.2;
+}
+
+/* Preço */
+.price-box-modern {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.new-price-modern {
+  font-size: 32px;
+  font-weight: 700;
+  border-bottom: 3px solid #9D6155;
+  color: var(--ink);
+}
+
+/* Descrição */
+.product-description-modern {
+  margin: 25px 0 35px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--ink-light);
+  background: var(--white);
+  padding: 20px;
+  border: #333 solid 1px;
+}
+
+/* ==========================================
+   QUANTIDADE + ADICIONAR AO CARRINHO
+========================================== */
+.quantity-addcart {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Contador */
+.quantity-box-modern {
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--rose);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.quantity-box-modern button {
+  background: var(--white);
+  border: none;
+  font-size: 24px;
+  width: 42px;
+  height: 48px;
+  cursor: pointer;
+  color: var(--rose-dark);
+  transition: 0.2s;
+}
+
+.quantity-box-modern button:hover {
+  background: var(--champagne);
+}
+
+.quantity-box-modern input {
+  width: 60px;
+  height: 48px;
+  border: none;
+  text-align: center;
+  font-size: 18px;
+  outline: none;
+  color: var(--ink);
+}
+
+/* Botão adicionar */
+.add-cart-btn-modern {
+  background: #9D6155;
+  color: white;
+  border: none;
+  padding: 14px 26px;
+  font-size: 18px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: 0.25s;
+  font-weight: 600;
+  box-shadow: var(--shadow-md);
+}
+
+.add-cart-btn-modern:hover {
+  transform: translateY(-2px);
+}
+
+/* Total */
+.total-modern {
+  margin: 20px 20px;
+  font-size: 19px;
+  font-weight: 600;
+  color: #9D6155;
+}
+
+/* ==========================================
+   FRETE
+========================================== */
+.shipping-modern {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.shipping-modern input {
+  width: 150px;
+  padding: 12px;
+  border: 2px solid var(--rose);
+  border-radius: var(--radius);
+  background: var(--white);
+}
+
+.shipping-modern button {
+  background: #9D6155;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: 0.25s;
+  box-shadow: var(--shadow-md);
+}
+
+
+
+/* ==========================================
+   ZOOM LIGHTBOX
+========================================== */
+/* ===== LIGHTBOX ===== */
+
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9990;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  animation: fadeIn 0.3s ease;
+}
+
+.lightbox-image {
+  width: 60%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -35px;
+  right: -5px;
+  font-size: 42px;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+
+/* ======================================================
+   ⭐ PRODUTOS RELACIONADOS — ESTÉTICA PREMIUM + TAMANHO FIXO
+   ====================================================== */
+
+.related-products-section {
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f3e5e5, #e7d0d0);
+  border: 1px solid #d8b8b8;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+}
+
+.related-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  color: #9D6155;
+margin-top: 0;
+}
+
+/* 🧁 LISTA DOS CARDS ---------------------------------- */
+.related-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 22px;
+  overflow-x: auto;
+ 
+  scroll-behavior: smooth;
+}
+
+.related-list::-webkit-scrollbar {
+  height: 8px;
+}
+
+.related-list::-webkit-scrollbar-thumb {
+  background: #c9a3a3;
+  border-radius: 40px;
+}
+
+/* 🍰 CARD PADRONIZADO (TAMANHO FIXO) ------------------ */
+.related-card {
+  flex: 0 0 260px;             /* largura fixa */
+  width: 260px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 14px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #e3caca;
+
+  transition: all 0.25s ease;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.related-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+}
+
+/* 🖼️ IMAGEM PADRONIZADA (ALTURA FIXA) ---------------- */
+.related-card img {
+  width: 100%;
+  height: 190px;          /* altura fixa */
+  object-fit: cover;      /* corta sem deformar */
+  border-radius: 14px;
+  background: #f8efef;
+}
+
+/* 📄 TEXTOS ------------------------------------------- */
+.related-card h3 {
+  margin-top: 14px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #5b2c0a;
+}
+
+.related-card p {
+  font-size: 16px;
+  color: #7a4a2d;
+  margin-top: 6px;
+}
+
+/* ======================================================
+   📱 RESPONSIVIDADE
+   ====================================================== */
+
+@media (max-width: 600px) {
+  .related-card {
+    flex: 0 0 210px;
+    width: 210px;
+  }
+
+  .related-card img {
+    height: 160px;
+  }
+}
+
+/* ======================================================
+   ⭐ BASE DO CONTAINER
+   ====================================================== */
+
+.carousel-related-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* ======================================================
+   ⭐ BOTÕES DE NAVEGAÇÃO
+   ====================================================== */
+
+.related-btn {
+  position: absolute;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 28px;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.2s ease;
+}
+
+.related-btn:hover {
+  background: #ffe1e1;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.related-btn.left {
+  left: -10px;
+}
+
+.related-btn.right {
+  right: -10px;
+}
+
+/* ======================================================
+   ⭐ LISTA DO CARROSSEL
+   ====================================================== */
+
+.related-list {
+  display: flex;
+  gap: 22px;
+  overflow-x: auto;
+  padding: 18px 12px;
+  scroll-behavior: smooth;
+}
+
+.related-list::-webkit-scrollbar {
+  height: 10px;
+}
+
+.related-list::-webkit-scrollbar-thumb {
+  background: #c49d9d;
+  border-radius: 30px;
+}
+
+/* ======================================================
+   ⭐ CARD (padronizado)
+   ====================================================== */
+
+.related-card {
+  flex: 0 0 260px;
+  width: 260px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 14px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #e5cccc;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  transition: all 0.25s ease;
+}
+
+.related-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 22px rgba(0,0,0,0.20);
+}
+
+.related-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 14px;
+  background: #f8efef;
+}
+
+.related-card h3 {
+  margin-top: 14px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #9D6155;
+}
+
+.related-card p {
+  font-size: 16px;
+  color: #7a4a2d;
+  margin-top: 6px;
+}
+
+/* ======================================================
+   📱 RESPONSIVO
+   ====================================================== */
+
+@media (max-width: 700px) {
+  .related-card {
+    flex: 0 0 210px;
+    width: 210px;
+  }
+
+  .related-card img {
+    height: 160px;
+  }
+
+  .related-btn {
+    display: none; /* mobile usa arrastar */
+  }
+}
+
+/* =================================== */
+/* ⭐ SEÇÃO DE AVALIAÇÕES CHIQUE */
+/* =================================== */
+
+.reviews-section {
+  margin: 80px auto;
+  max-width: 1100px;
+  text-align: center;
+}
+
+.reviews-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #4a2c2a;
+  margin-bottom: 40px;
+  background: linear-gradient(90deg, #d8a9b5, #b48b74);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.reviews-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.review-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.review-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #5a3734;
+}
+
+.review-stars {
+  font-size: 1.2rem;
+  color: #f5c26b;
+  letter-spacing: 2px;
+}
+
+.review-text {
+  font-size: 0.95rem;
+  color: #5c4a47;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* =================================== */
+/* ⭐ AVALIAÇÕES COM FOTOS */
+/* =================================== */
+
+.review-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.review-avatar {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #e9c8c8;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.review-name {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #5a3734;
+  margin-bottom: 2px;
+}
+

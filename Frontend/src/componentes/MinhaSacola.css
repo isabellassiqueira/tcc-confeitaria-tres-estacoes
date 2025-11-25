@@ -1,0 +1,308 @@
+/* Estrutura geral */
+.minha-sacola-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+.sacola-title {
+  font-size: 2.5rem;
+  color: #9d6155;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sacola-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+/* Tabela de produtos */
+.tabela-sacola {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+}
+
+.tabela-sacola th,
+.tabela-sacola td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.tabela-sacola th {
+  font-size: 1.1rem;
+  color: #9d6155;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tabela-sacola td {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+  
+}
+
+.produto-nome {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.produto-nome img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Quantidade */
+.quantidade-btns {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.quantidade-btns button {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  border: none;
+  background-color: #9d6155;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.quantidade-btns button:hover {
+  background-color: #7c4c3a;
+}
+
+.remover-btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  width: 40px !important;
+  height: 40px !important;
+
+  color: rgb(0, 0, 0) !important;
+
+  font-size: 20px !important;
+  font-weight: bold !important;
+
+  border: none !important;
+  border-radius: 8px !important;
+
+  cursor: pointer !important;
+
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.tabela-sacola td {
+  position: relative;
+}
+
+/* Evita que imagens ou textos sobreponham o botão */
+.tabela-sacola td:last-child {
+  z-index: 50;
+}
+
+/* Resumo do pedido */
+.resumo-sacola {
+  background-color: #fff5f0;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.resumo-sacola h3 {
+  margin-top: 0;
+  color: #9d6155;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.cep-cupom .input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.cep-cupom input {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.btn-pequeno {
+  padding: 8px 14px;
+  background-color: #9d6155;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.btn-pequeno:hover {
+  background-color: #7c4c3a;
+}
+
+/* Totais */
+.totais-sacola p,
+.totais-sacola h3 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  margin: 6px 0;
+}
+
+.totais-sacola h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.btn-finalizar {
+  width: 100%;
+  padding: 14px;
+  background-color: #9d6155;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-finalizar:hover {
+  background-color: #7c4c3a;
+  transform: translateY(-2px);
+}
+
+.sacola-vazia {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #555;
+}
+
+/* Botão de continuar comprando */
+.continuar-comprando {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.btn-continuar {
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 2px solid #9d6155;
+  color: #9d6155;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-continuar:hover {
+  background-color: #9d6155;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Fundo escuro atrás do pop-up */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Caixa branca do pop-up */
+.popup-box {
+  background: #fff;
+  padding: 30px 40px;
+  width: 90%;
+  max-width: 420px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  animation: slideUp 0.35s ease;
+}
+
+/* Título do pop-up */
+.popup-box h2 {
+  margin-bottom: 10px;
+  color: #7c4c3a;
+  font-size: 26px;
+}
+
+/* Texto do pop-up */
+.popup-box p {
+  margin-bottom: 25px;
+  font-size: 16px;
+  color: #444;
+}
+
+/* Container dos botões */
+.popup-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Botões */
+.btn-popup {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background: #7c4c3a;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+
+/* Botão de "Meus pedidos" com cor diferente */
+.btn-popup.meus-pedidos {
+  background: #7c4c3a;
+}
+
+/* Animação do fundo */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Animação da caixinha subindo */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

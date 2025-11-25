@@ -1,0 +1,249 @@
+/* ===== PALETA ===== */
+:root {
+  --champagne: #f5e9d7;
+  --champagne-light: #faefe4;
+  --rose: #e8b4bc;
+  --rose-dark: #cc8a94;
+  --gold: #c6a667;
+  --gold-dark: #a4854d;
+  --ink: #333;
+  --white: #faf9f7;
+}
+
+/* ===== LAYOUT GERAL ===== */
+.produtos-container {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 40px;
+  padding: 40px;
+  background: #9d6155ba;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.section-title {
+  margin-bottom: 18px;
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--gold-dark);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ===== CARD DO FORMULÁRIO ===== */
+.produtos-form-card {
+  background: var(--white);
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  border: 1px solid var(--champagne);
+  position: sticky;
+  top: 30px;
+  transition: 0.3s ease;
+}
+
+.produtos-form-card:hover {
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+}
+
+/* ===== CARD DA LISTA ===== */
+.produtos-lista-card {
+  background: var(--white);
+  padding: 28px;
+  border-radius: 20px;
+  border: 1px solid var(--champagne);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  transition: 0.3s ease;
+}
+
+.produtos-lista-card:hover {
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+}
+
+.empty-list {
+  font-size: 18px;
+  color: var(--rose-dark);
+  text-align: center;
+  padding: 20px;
+  font-weight: 500;
+}
+
+/* ===== GRID DOS PRODUTOS ===== */
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* ===== CARD DO PRODUTO ===== */
+.produto-card {
+  background: var(--champagne-light);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--champagne);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transition: all 0.35s ease;
+}
+
+.produto-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.20);
+}
+
+/* Imagem */
+.produto-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid var(--champagne);
+}
+
+/* Conteúdo interno */
+.produto-info {
+  padding: 18px 20px;
+}
+
+.produto-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.produto-topo h3 {
+  font-size: 20px;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.produto-preco {
+  font-weight: 700;
+  color: var(--gold-dark);
+  font-size: 19px;
+}
+
+/* Descrição */
+.produto-desc {
+  margin: 12px 0 18px;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* ===== AÇÕES ===== */
+.produto-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-edit,
+.btn-delete {
+  padding: 8px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+/* Botão Editar */
+.btn-edit {
+  background: var(--rose);
+  color: var(--white);
+}
+
+.btn-edit:hover {
+  background: var(--rose-dark);
+  transform: scale(1.03);
+}
+
+/* Botão Excluir */
+.btn-delete {
+  background: #e26d6d;
+  color: white;
+}
+
+.btn-delete:hover {
+  background: #c74f4f;
+  transform: scale(1.03);
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 950px) {
+  .produtos-container {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .produtos-form-card {
+    position: static;
+  }
+}
+
+/* ===== FILTRO ===== */
+.filtro-container {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 25px;
+  background: var(--champagne-light);
+  padding: 14px 20px;
+  border-radius: 14px;
+  border: 1px solid var(--champagne);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+}
+
+.filtro-container label {
+  font-weight: 600;
+  color: var(--gold-dark);
+  font-size: 17px;
+}
+
+.filtro-select {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--gold);
+  background: var(--white);
+  font-size: 15px;
+  color: var(--ink);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.filtro-select:hover {
+  border-color: var(--gold-dark);
+  transform: scale(1.02);
+}
+
+/* TAG COLORIDA */
+.tag {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  color: white;
+}
+
+/* CORES POR TIPO */
+.tag-bolos {
+  background: #d49ae8;
+}
+
+.tag-doce {
+  background: #ff7bc3;
+}
+
+.tag-salgados {
+  background: #ffb85c;
+}
+
+.tag-bebidas {
+  background: #6ec4ff;
+}
+
+.tag-especial {
+  background: #b8e986;
+}
