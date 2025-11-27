@@ -276,3 +276,10 @@ POST	/auth/login	Fazer login
 ---
 
 ## 👩‍💻 Projeto desenvolvido por Isabella, Lavignya e Sayuri para conclusão do curso de Desenvolvimento de Sistemas da instituição SENAI - Osasco.
+Linkedin:
+
+https://www.linkedin.com/in/isabella-dos-santos-siqueira-877300382/
+
+https://www.linkedin.com/in/lavignya-silva-santiago-0ba760383/
+
+https://www.linkedin.com/in/sayuri-nakagawa-2bab59381/
