@@ -240,7 +240,7 @@ Ajuste o arquivo db.js se necessário.
 
 - Auth
 
-POST, /auth/register, Cadastras
+POST, /auth/register, Cadastrar
 
 POST	/auth/login	Fazer login
 
@@ -269,9 +269,19 @@ POST	/auth/login	Fazer login
 ---
 
 ## 🖼 Screenshots
-<img width="700" alt="Captura de tela 2025-11-22 233458" src="https://github.com/user-attachments/assets/17af7c92-886a-4606-af7c-24744b80f912" />
-
-<img width="700" alt="Captura de tela 2025-11-27 003527" src="https://github.com/user-attachments/assets/4f6f83cf-e3a5-4c6f-8c2b-7c029954daa7" />
+<img  width="700" src="https://github.com/user-attachments/assets/2c9a0f45-19e7-4838-a887-2c7e94291417" />
+<img width="700"  src="https://github.com/user-attachments/assets/6f9d13b7-d348-46d7-8dd5-e6705f3361fc" />
+<img width="700" src="https://github.com/user-attachments/assets/9555de2c-ca7c-435b-b034-fdb3aa9265d1" />
+<img width="700" src="https://github.com/user-attachments/assets/61a65569-ffd4-4ee8-8570-667dc435cab7" />
+<img width="700" src="https://github.com/user-attachments/assets/a5d4a0e1-2706-4d8b-84c0-67475baca532" />
+<img width="700" src="https://github.com/user-attachments/assets/3ded6673-2368-4647-b389-39317e635d66" />
+<img width="700" src="https://github.com/user-attachments/assets/0579110b-5f93-4afe-9271-db9bbefa81fe" />
+<img width="700" src="https://github.com/user-attachments/assets/885c5b24-5a17-44ea-97b2-bb8833935882" />
+<img width="700" src="https://github.com/user-attachments/assets/ce58bce2-6ccc-458f-8352-71e713a1aa16" />
+<img width="700" src="https://github.com/user-attachments/assets/f727bfd3-b48a-41d9-93b0-e0cc27f2647b" />
+<img width="700" src="https://github.com/user-attachments/assets/5e0a5aa5-8dc2-446c-988b-ca63985cb94b" />
+<img width="700" src="https://github.com/user-attachments/assets/e6b43156-87f8-4ae3-8650-9d9b3c538a2c" />
+<img width="700" src="https://github.com/user-attachments/assets/680678f6-a411-4cad-8513-ad740f3b1b8b" />
 
 ---
 
